@@ -23,15 +23,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Select hand configuration */
 
 #define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
 
 #undef OLED_FONT_H
-#define OLED_FONT_H "keyboards/lily58/keymaps/lily58-corne-version/glcdfont.c"
+#define OLED_FONT_H "keyboards/lily58/keymaps/monti-lily58/glcdfont.c"
 
-#define OLED_TIMEOUT 30000
+#define OLED_TIMEOUT 30000 // in ms
 #define OLED_BRIGHTNESS 192 // d75%
 #define OLED_UPDATE_INTERVAL 100 //in ms
+
+#define LAYER_LOCK_IDLE_TIMEOUT 60000  // Turn off layer lock after 60 seconds.
 
 // Change debounce time for eager
 #undef DEBOUNCE
@@ -60,27 +60,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define U_NP KC_NO // key is not present
 #define U_NA KC_NO // present but not available for use
 #define U_NU KC_NO // available but not used
-#define U_RDO C(KC_Y)
-#define U_PST C(KC_V)
-#define U_CPY C(KC_C)
+#define U_REDO C(KC_Y)
+#define U_PSTE C(KC_V)
+#define U_COPY C(KC_C)
 #define U_CUT C(KC_X)
-#define U_UND C(KC_Z) 
+#define U_UNDO C(KC_Z) 
 
-
-#define LAYOUT_miryoku(\
-     K00, K01, K02, K03, K04,                K05, K06, K07, K08, K09,\
-     K10, K11, K12, K13, K14,                K15, K16, K17, K18, K19,\
-     K20, K21, K22, K23, K24,                K25, K26, K27, K28, K29,\
-     N30, N31, K32, K33, K34,                K35, K36, K37, N38, N39\
-)\
-LAYOUT(\
-XXX, XXX, XXX, XXX, XXX, XXX,                XXX, XXX, XXX, XXX, XXX, XXX,\
-XXX, K00, K01, K02, K03, K04,                K05, K06, K07, K08, K09, XXX,\
-XXX, K10, K11, K12, K13, K14,                K15, K16, K17, K18, K19, XXX,\
-XXX, K20, K21, K22, K23, K24, XXX,      XXX, K25, K26, K27, K28, K29, XXX,\
-               XXX, K32, K33, K34,      K35, K36, K37, XXX\
-)
-
-#define SPLIT_WPM_ENABLE
-
-//#define DEBUG_MATRIX_SCAN_RATE
+#define U_WINLK LGUI(KC_L) // Windows key & l for locking PC
