@@ -168,7 +168,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |      |      |      |      |                    |      | WINL |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      | LGUI | LALT | LCTRL| LSFT | LOCK |-------.    ,-------|      | REWD | VOLU | VOLD | FORW |      |
+ * |      | LGUI | LALT | LCTRL| LSFT | LOCK |-------.    ,-------|      | REWD | VOLD | VOLU | FORW |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      | RGUI | RALT | RCTRL| RSFT |      |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -179,7 +179,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [MEDIA] = LAYOUT(
     U_NU,   U_NU,    U_NU,    U_NU,    U_NU,    U_NU,                   U_NU,    U_NU,    U_NU,    U_NU,    U_NU,    U_NU, \
     U_NU,   U_NA ,   U_NA,    U_NA,    U_NA,    U_NA,                   U_NA,    U_WINLK, U_NA,    U_NA,    U_NA,    U_NU, \
-    U_NU,   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, U_NA,                   U_NU,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, U_NU, \
+    U_NU,   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, LLOCK,                  U_NU,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, U_NU, \
     U_NU,   KC_RGUI, KC_RALT, KC_RCTL, KC_RSFT, U_NU,  U_NU,    U_NU,   U_NU,    U_NU,    U_NU,    U_NU,    U_NU,    U_NU, \
                             U_NA,    U_NA,    U_NA,    U_NA,    KC_MSTP, KC_MPLY, KC_MUTE, U_NU \
     ),
@@ -206,7 +206,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 U_NP,    KC_PERC, KC_DLR,   KC_HASH,U_NA,   U_NA,    U_NA,    U_NA \
     ),
 
-//Template
+//FUNCTION
 /*
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
@@ -725,10 +725,6 @@ void suspend_power_down_user(void) {
     layer_clear();
 
 }
-// void layer_lock_set_user(layer_state_t locked_layers) {
-//   // Toggle a boolean for locked state
-//   is_a_layer_locked = !is_a_layer_locked;
-// }
 
 //Template
 /*
