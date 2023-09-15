@@ -178,13 +178,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [MEDIA] = LAYOUT(
     U_NU,   U_NU,    U_NU,    U_NU,    U_NU,    U_NU,                   U_NU,    U_NU,    U_NU,    U_NU,    U_NU,    U_NU, \
-    U_NU,   U_NA ,   U_NA,    U_NA,    U_NA,    U_NA,                   U_NA,    U_NA,    U_NA,    U_NA,    U_NA,    U_NU, \
+    U_NU,   U_NA ,   U_NA,    U_NA,    U_NA,    U_NA,                   U_NA,    U_WINLK, U_NA,    U_NA,    U_NA,    U_NU, \
     U_NU,   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, U_NA,                   U_NU,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, U_NU, \
     U_NU,   KC_RGUI, KC_RALT, KC_RCTL, KC_RSFT, U_NU,  U_NU,    U_NU,   U_NU,    U_NU,    U_NU,    U_NU,    U_NU,    U_NU, \
                             U_NA,    U_NA,    U_NA,    U_NA,    KC_MSTP, KC_MPLY, KC_MUTE, U_NU \
     ),
 
-/* SYMBOLs
+/* SYMBOLS
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|

@@ -62,5 +62,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define U_COPY C(KC_C)
 #define U_CUT C(KC_X)
 #define U_UNDO C(KC_Z) 
-
 #define U_WINLK LGUI(KC_L) // Windows key & l for locking PC
