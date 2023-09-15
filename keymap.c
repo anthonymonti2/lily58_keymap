@@ -666,10 +666,6 @@ bool oled_task_user(void) {
   }
   return true;
 }
-
-void suspend_power_down_user(void) {
-    oled_off();
-}
 #endif // OLED_DRIVER_ENABLE
 
 uint8_t mod_state;
@@ -712,11 +708,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 // For layer lock. Need to add timeout every scan cycle
-void matrix_scan_user(void) {
-  layer_lock_task();
-
+// Run time based events at then end of each update cycle
+void housekeeping_task_user(void) {
+    layer_lock_task();
 }
 
+// Tasks to do when the keyboard is told the system is idle
+void suspend_power_down_user(void) {
+    #ifdef OLED_DRIVER_ENABLE
+    oled_off();
+    #endif
+
+    // Reset layer back to default
+    layer_clear();
+
+}
 // void layer_lock_set_user(layer_state_t locked_layers) {
 //   // Toggle a boolean for locked state
 //   is_a_layer_locked = !is_a_layer_locked;
