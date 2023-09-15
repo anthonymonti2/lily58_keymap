@@ -24,7 +24,7 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 LTO_ENABLE = yes
 
 #sym_defer_g
-DEBOUNCE_TYPE = sym_eager_pk
+DEBOUNCE_TYPE = asym_eager_defer_pk
 #sym_eager_pk
 
 #CONSOLE_ENABLE = yes
@@ -32,4 +32,4 @@ DEBOUNCE_TYPE = sym_eager_pk
 SRC += caps_word.c layer_lock.c
 
 # Bootloader selection
-#BOOTLOADER = atmel-dfu 
+BOOTLOADER = atmel-dfu 
