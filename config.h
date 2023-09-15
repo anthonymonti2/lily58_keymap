@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 
 #undef OLED_FONT_H
-#define OLED_FONT_H "keyboards/lily58/keymaps/monti-lily58/glcdfont.c"
+#define OLED_FONT_H "keyboards/lily58/keymaps/Monti/glcdfont.c"
 
 #define OLED_TIMEOUT 30000 // in ms
 #define OLED_BRIGHTNESS 192 // d75%
@@ -35,14 +35,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Change debounce time for eager
 #undef DEBOUNCE
-#define DEBOUNCE 20
+#define DEBOUNCE 10
 
 // default but used in macros
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
-
-// Prevent normal rollover on alphas from accidentally triggering mods.
-#define IGNORE_MOD_TAP_INTERRUPT
 
 // If a second key is pressed when holding a dual action key it will
 // send the hold action key immediatly
