@@ -419,20 +419,30 @@ static void render_luna(int LUNA_X, int LUNA_Y) {
         }
     }
 
+
+    #if OLED_TIMEOUT > 0
+    /* the animation prevents the normal timeout from occuring */
+    if (last_input_activity_elapsed() > OLED_TIMEOUT && last_led_activity_elapsed() > OLED_TIMEOUT) {
+        oled_off();
+        return;
+    } else {
+        oled_on();
+    }
+    #endif
+
     /* animation timer */
     if(is_oled_on() &&timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
         anim_timer = timer_read32();
         animate_luna();
     }
 
-    /* this fixes the screen on and off bug */
-    if (current_wpm > 0) {
-        oled_on();
-        anim_sleep = timer_read32();
-    } else if(timer_elapsed32(anim_sleep) > OLED_TIMEOUT) {
-        oled_off();
-    }
-
+    // /* this fixes the screen on and off bug */
+    // if (current_wpm > 0) {
+    //     oled_on();
+    //     anim_sleep = timer_read32();
+    // } else if(timer_elapsed32(anim_sleep) > OLED_TIMEOUT) {
+    //     oled_off();
+    // }
 }
 
 // /* KEYBOARD PET END */
