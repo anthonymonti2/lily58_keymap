@@ -21,11 +21,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 /* Select hand configuration */
-
+/* Split keyboard info */
 #define MASTER_LEFT
+// Send WPM to the other side
+#define SPLIT_WPM_ENABLE
+
+// Sync caps lock state between sides
+#define SPLIT_LED_STATE_ENABLE
+
+// Sync on off state of OLED
+#define SPLIT_OLED_ENABLE
+
+// Sync activity between halves for luna animation
+#define SPLIT_ACTIVITY_ENABLE
 
 #undef OLED_FONT_H
-#define OLED_FONT_H "keyboards/lily58/keymaps/Monti/glcdfont.c"
+#define OLED_FONT_H "keyboards/lily58/keymaps/monti/glcdfont.c"
 
 #define OLED_TIMEOUT 30000 // in ms
 #define OLED_BRIGHTNESS 192 // d75%
@@ -33,9 +44,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LAYER_LOCK_IDLE_TIMEOUT 60000  // Turn off layer lock after 60 seconds.
 
+// Caps word settings
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 // Change debounce time for eager
 #undef DEBOUNCE
 #define DEBOUNCE 10
+
+// Change the default USB speed to USB2.0
+#define USB_POLLING_INTERVAL_MS 1
+
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
 
 // default but used in macros
 #undef TAPPING_TERM
@@ -51,7 +71,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUTO_SHIFT_NO_SETUP
 
 // Recommended for heavy chording.
-#define QMK_KEYS_PER_SCAN 4
+#define QMK_KEYS_PER_SCAN 6
 
 #define XXX KC_NO
 #define U_NP KC_NO // key is not present

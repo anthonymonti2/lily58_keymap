@@ -20,16 +20,13 @@ WPM_ENABLE = yes            # Enable WPM calc
 AUTO_SHIFT_ENABLE = no     # Enable auto shift
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
-
 LTO_ENABLE = yes
+CAPS_WORD_ENABLE = yes
 
-#sym_defer_g
 DEBOUNCE_TYPE = asym_eager_defer_pk
-#sym_eager_pk
 
-#CONSOLE_ENABLE = yes
+# If you want to change the display of OLED, you need to change here
+SRC +=  layer_lock.c
 
-SRC += caps_word.c layer_lock.c
 
-# Bootloader selection
-BOOTLOADER = atmel-dfu 
+CONVERT_TO=promicro_rp2040                                                              
