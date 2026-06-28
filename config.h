@@ -21,13 +21,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 /* Select hand configuration */
-//#define MASTER_LEFT
+#define MASTER_LEFT
 // Set up the master based on which side has USB input
 #define SPLIT_USB_DETECT
-#define SPLIT_USB_TIMEOUT 2000
+#define SPLIT_USB_TIMEOUT 10000
 #define SPLIT_USB_TIMEOUT_POLL 10
 #define SPLIT_WATCHDOG_ENABLE
-#define SPLIT_WATCHDOG_TIMEOUT 3000
+#define SPLIT_WATCHDOG_TIMEOUT 15000
 
 // Send WPM to the other side
 #define SPLIT_WPM_ENABLE
